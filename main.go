@@ -44,6 +44,8 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	// 検索結果画面の URL を取得
 	url, err := page.URL()
 	if err != nil {
 		fmt.Println(err)
@@ -56,7 +58,7 @@ func main() {
 		fmt.Println(err)
 	}
 	if res.StatusCode != 200 {
-		fmt.Println(err)
+		fmt.Println(res.StatusCode)
 	}
 	defer res.Body.Close()
 
